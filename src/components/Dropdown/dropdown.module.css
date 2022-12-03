@@ -1,0 +1,151 @@
+.container {
+  position: relative;
+  width: 600px;
+  height: 3rem;
+  border: 0.05em solid #777;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  padding: 0 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+}
+
+.container:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.searchOptions {
+  display: flex;
+  align-items: center;
+  /* gap: 0.4rem; */
+}
+
+.value {
+  position: absolute;
+  top: 50%;
+  right: 5em;
+  transform: translateY(-50%);
+  flex-grow: 1;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.clear-btn {
+  display: grid;
+  place-content: center;
+  background: none;
+  color: #777;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.clear-btn:focus,
+.clear-btn:hover {
+  color: rgb(253, 253, 253);
+}
+
+.divider {
+  background-color: #777;
+  align-self: stretch;
+  width: 0.05em;
+}
+
+.caret svg {
+  color: #777;
+  display: grid;
+  place-content: center;
+}
+
+.caret:hover svg {
+  cursor: pointer;
+  color: white;
+}
+
+.options {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  max-height: 15em;
+  overflow-y: auto;
+  border: 0.05em solid #777;
+  border-radius: 0.25em;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 0.25em);
+  background-color: rgb(59, 59, 59);
+  z-index: 100;
+}
+
+/* .embedding {
+  background-color: rgb(24, 24, 24);
+  display: grid;
+  place-content: center;
+  height: 3rem;
+  border-bottom: 2px solid white;
+} */
+
+.embedding:hover {
+  background-color: rgb(43, 43, 43);
+}
+
+.options.show {
+  display: block;
+}
+
+.option {
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: hsl(0, 0%, 29%);
+}
+
+.option.selected {
+  background-color: hsl(0, 0%, 15%);
+}
+
+
+.option-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.15em 0.25em;
+  gap: 0.25em;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  background-color: rgb(100, 100, 100);
+}
+
+.option-badge:hover,
+.option-badge:focus {
+  background-color: rgb(77, 77, 77);
+}
+
+.remove-btn svg {
+  display: grid;
+  place-content: center;
+  width: 16px;
+  height: 16px;
+  color: rgb(255, 255, 255);
+  /* background-color: red; */
+}
+
+.option-badge:hover > .remove-btn,
+.option-badge:focus > .remove-btn {
+  color: #777;
+}
+
+.option-badge > .remove-btn {
+  font-size: 1.25em;
+  color: #777;
+}
